@@ -1,0 +1,10 @@
+<form #signupform="ngForm" (ngSubmit)="signup(signupform.value)">
+    <input type="text" placeholder="Enter Name" name="name" ngModel/>
+    <br/>
+    <input type="text" placeholder="Enter Email" name="email" ngModel/>
+    <br/>
+    <input type="text" placeholder="Enter Mobile number" name="mob_number" ngModel/>
+    <br/>
+    <button type="submit">Submit</button>
+    <br/>
+</form>

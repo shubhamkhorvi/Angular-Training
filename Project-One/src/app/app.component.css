@@ -1,0 +1,15 @@
+.text-red{
+    color: red;
+    background-color: blue;
+}
+
+.big-red-italic{
+    color: red;
+    font-size: 50px;
+    font-style: italic;
+}
+
+.friends{
+    font-size:x-large;
+    font-style: oblique;
+}

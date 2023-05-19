@@ -1,0 +1,78 @@
+
+<form>
+  <input type="number" placeholder="Enter Dividend" #a/>
+  <br/>
+  <input type="number" placeholder="Enter Divisor" #b/>
+  <br/>
+  <button (click)="div(a,b)">Divide</button>
+</form>
+<div *ngIf="num3; else myElseBlock">
+    {{num1}} / {{num2}} = {{num3}}
+</div>
+<ng-template #myElseBlock>
+  <div style="color: red;">Divide by 0 not possible</div>
+</ng-template>
+
+<br/>
+<hr/>
+<h1>{{message}}</h1>
+<h1>{{message | lowercase}}</h1>
+<h1>{{message | uppercase}}</h1>
+<h1>{{message | titlecase}}</h1>
+<h1>{{message | slice:3}}</h1>
+<h1>{{message | slice:3:5}}</h1>
+<h1>{{product | json}}</h1>
+
+<h1>{{val}}</h1>
+<h1>{{val|number:'1.2-3'}}</h1>
+<h1>{{val|number:'1.2-4'}}</h1>
+<h1>{{val|percent}}</h1>
+
+<h1>{{val|currency}}</h1>
+<h1>{{val|currency:'INR'}}</h1>
+<h1>{{val|currency:'INR':'code'}}</h1>
+
+<h1>{{currentdate}}</h1>
+<h1>{{currentdate|date:'short'}}</h1>
+<h1>{{currentdate|date:'shortDate'}}</h1>
+<h1>{{currentdate|date:'shortTime'}}</h1>
+<h1>{{currentdate|date:'long'}}</h1>
+<h1>{{currentdate|date:'longDate'}}</h1>
+<h1>{{currentdate|date:'longTime'}}</h1>
+<h1>{{currentdate| date:'dd/MM/yyyy'}}</h1>
+<h1>{{currentdate| date:'dd/MM/yyyy HH:mm:ss'}}</h1>
+
+<br/>
+<hr/>
+
+<ul>
+  <li *ngFor="let x of productList">
+    {{x.id}}-{{x.name}}
+  </li>
+</ul>
+
+<table border="1">
+  <thead>
+    <tr>
+      <td> Sl. No  </td>
+      <td> Product Name</td>
+      <td> Price </td>
+      <td> Product ID </td>
+    </tr>
+  </thead>
+  <tbody *ngFor="let prod of productList; index as i">
+    <tr>
+      
+      <td> {{i}} </td>
+      <td> {{prod.name}} </td>
+      <td> {{prod.price}} </td>
+      <td> {{prod.id}} </td>
+    </tr>
+  </tbody>
+</table>
+
+<div [ngSwitch]="city">
+ <p *ngSwitchCase="'Delhi'">I am From Delhi</p>
+ <p *ngSwitchCase="'Mumbai'">I am From Mumbai</p>
+ <p *ngSwitchCase="'Chennai'">I am From Chennai</p>
+</div>

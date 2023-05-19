@@ -1,0 +1,20 @@
+<div> Hello everyone. {{greeting}}</div><br>
+
+<div style.color="{{propertyBiding1}}"> The above statement is an example for interpolation</div>
+<div [style.color]="propertyBiding2"> This statement and above statement is an example for property binding</div><br>
+
+<div>
+  <p>Control the color of below text</p>
+  <input type="radio" [(ngModel)]="hasError" [value]="true"/> Red
+  <input type="radio" [(ngModel)]="hasError" [value]="false"/> Green
+  <div [style.color]="hasError ? fail : success"><h1>My colour changes</h1></div>
+</div>
+
+<div>
+  <h2 [class]="cssClassNameForRedText">Assign CSS with property binding</h2>
+  <h2 class="big-red-italic">Assign CSS directly</h2>
+</div>
+<p>These are my friends</p>
+<ol>
+  <li [style.color]="friendsColor[i]" class="friends" *ngFor="let friends of friendsList; index as i">{{friends}}</li>
+</ol>
